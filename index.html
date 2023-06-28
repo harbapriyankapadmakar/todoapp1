@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo App</title>
+        <link rel="stylesheet" href="todo.css ">
+    </head>
+
+    <section class="container">
+    <h1>To-Do App</h1>
+    
+    <div class="new-task-container box">
+    
+    <label for="new-task">Add New Task</label>
+    <input type="text" id="new-task">
+    <label for="new-task1">Add Description</label>
+    <input type="text" id="new-task1">
+      <button id="addTask">Add Task</button>
+    
+    </div>
+    
+    <div class="todo-list box">
+    
+      <h2>Incomplete Tasks</h2>
+
+      <ul>
+       
+      </ul>
+      <ul>     </ul>
+    
+    </div><!--/todo-list-->
+    
+    <div class="complete-list box">
+      
+      <h2>Completed Tasks</h2>
+      <ul>
+       
+      </ul>
+      
+      
+    </div><!--/complete-list-->
+    
+    
+    
+    
+    
+  </section><!--/container-->
+  <script src ="todo.js"></script>
+  <script>
+     <script>
+            function saveToLocalStorage(event){
+             event.preventDefault();
+                const name=event.target.newtask.value;
+                
+              //  localStorage.setItem('name',name);
+             //  localStorage.setItem('email',email);
+              //  localStorage.setItem('phoneno',phoneno);
+               let obj={
+                newtask
+               }
+
+               axios.post("https://crudcrud.com/api/a8a8244b37c245218f1effcbcdeff48a,obj)
+               .then((respone)=>{
+                  showNewUserOnScreen(respone.data)
+                     console.log(respone)
+
+              })
+              .catch((err)=>{
+                console.log(err)
+               })
+
+               window.addEventListner("DOMContentLoaded",() =>{
+            axios.get("https://crudcrud.com/api/a8a8244b37c245218f1effcbcdeff48a,")
+            .then((respone)=>{
+                  showNewUserOnScreen(respone.data)
+                     console.log(respone)
+                     for(var i=0;i<=respone.data.length;i++){
+                        showNewUserOnScreen(respone.data[i])
+                     }
+
+              })
+              .catch((err)=>{
+                console.log(err)
+              })
+  
+
+  </script>
+</body>
+
+</html>
